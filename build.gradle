@@ -1,0 +1,22 @@
+plugins {
+    id("com.mkobit.jenkins.pipelines.shared-library") version "0.10.1"
+    id 'groovy'
+}
+
+repositories {
+    jcenter()
+}
+
+group 'com.synopsys.integration'
+version = '0.0.1-SNAPSHOT'
+
+sourceSets {
+    main {
+        java { srcDirs = [] } // no source dirs for the java compiler
+        groovy { srcDirs = ["src"] }
+    }
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.4.12'
+}
